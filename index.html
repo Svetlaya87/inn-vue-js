@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <link rel="stylesheet" href="./css/style.css">
+
+    <script src="https://unpkg.com/vue@3"></script>
+    <script  defer type='module'  src="./js/app.js"></script>
+    <title>INN</title>
+</head>
+<body>
+     <div class="container mt-5" id="app">
+
+        Введите ИНН <input @input="validation" v-model='inn' type="number">
+        <button @click="validation">Проверить!</button>
+        <h6>{{inn}}</h1>
+        <one-key :one-person="item" v-for="item in totRes"></one-key>
+     </div>
+    
+</body>
+</html>
